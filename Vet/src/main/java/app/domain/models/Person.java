@@ -7,17 +7,13 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-
 public class Person {
-    private long id;
-    private char name;
-    private long document;
+    private long personId;
+    private long documentId;
+    private String name;
     private int age;
+    private String role;
 
-    public Person(long id, char name, long document, int age) {
-        this.id = id;
-        this.name = name;
-        this.document = document;
-        this.age = age;
+    public Person(long documentId, String name, int age, String role) {
     }
 }

@@ -4,20 +4,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
-
 public class Pet {
-    private char name;
-    private long ownerId;
+    private long petId;
+    private String name;
+    private long ownerDocumentId;
+    private int age;
+    private String species;
+    private String breed;
+    private String characteristics;
+    private double weight;
 
-
-    public Pet(char name, long ownerId, int age, long id, char species, char breed, char color, double size, double weight, Timestamp dateCreated) {
+    public Pet(long petId, String name, long ownerDocumentId, int age, String species, String breed, String characteristics, double weight) {
+        this.petId = petId;
         this.name = name;
-        this.ownerId = ownerId;
+        this.ownerDocumentId = ownerDocumentId;
         this.age = age;
-        this.id = id;
-        this.name = name;
+        this.species = species;
+        this.breed = breed;
+        this.characteristics = characteristics;
+        this.weight = weight;
     }
 }
